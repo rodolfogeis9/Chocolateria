@@ -1,0 +1,16 @@
+# Cloud Build configuration for building and pushing the Chocolateria frontend image
+# Reemplaza REGION con tu región (por ejemplo, us-central1)
+# Reemplaza MI_PROYECTO con el ID de tu proyecto de Google Cloud
+# Reemplaza MI_REPOSITORIO con el nombre de tu repositorio en Artifact Registry
+
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      ["build", "-t", "REGION-docker.pkg.dev/MI_PROYECTO/MI_REPOSITORIO/chocolateria:latest", "."]
+
+  - name: gcr.io/cloud-builders/docker
+    args:
+      ["push", "REGION-docker.pkg.dev/MI_PROYECTO/MI_REPOSITORIO/chocolateria:latest"]
+
+images:
+  - REGION-docker.pkg.dev/MI_PROYECTO/MI_REPOSITORIO/chocolateria:latest
