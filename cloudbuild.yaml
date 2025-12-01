@@ -6,11 +6,19 @@
 steps:
   - name: gcr.io/cloud-builders/docker
     args:
-      ["build", "-t", "REGION-docker.pkg.dev/MI_PROYECTO/MI_REPOSITORIO/chocolateria:latest", "."]
+      [
+        "build",
+        "-t",
+        "southamerica-west1-docker.pkg.dev/chocolateria-dev/chocolateria/chocolateria:latest",
+        "."
+      ]
 
   - name: gcr.io/cloud-builders/docker
     args:
-      ["push", "REGION-docker.pkg.dev/MI_PROYECTO/MI_REPOSITORIO/chocolateria:latest"]
+      [
+        "push",
+        "southamerica-west1-docker.pkg.dev/chocolateria-dev/chocolateria/chocolateria:latest"
+      ]
 
 images:
-  - REGION-docker.pkg.dev/MI_PROYECTO/MI_REPOSITORIO/chocolateria:latest
+  - southamerica-west1-docker.pkg.dev/chocolateria-dev/chocolateria/chocolateria:latest
