@@ -12,7 +12,7 @@ export const products: Product[] = [
     tipoMedida: 'gramos',
     cantidad: 100,
     precio: 5000,
-    imageUrl: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: '/images/chocolate1.jpeg',
   },
   {
     id: 'choc-250',
@@ -22,7 +22,7 @@ export const products: Product[] = [
     tipoMedida: 'gramos',
     cantidad: 250,
     precio: 10000,
-    imageUrl: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: '/images/chocolate%202.jpeg',
   },
   {
     id: 'choc-500',
@@ -32,7 +32,7 @@ export const products: Product[] = [
     tipoMedida: 'gramos',
     cantidad: 500,
     precio: 15000,
-    imageUrl: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: '/images/chocolate%203.jpeg',
   },
   {
     id: 'choc-1000',
@@ -42,7 +42,7 @@ export const products: Product[] = [
     tipoMedida: 'gramos',
     cantidad: 1000,
     precio: 20000,
-    imageUrl: 'https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: '/images/chocolate%204.jpeg',
   },
   {
     id: 'alf-6',
@@ -52,7 +52,7 @@ export const products: Product[] = [
     tipoMedida: 'unidades',
     cantidad: 6,
     precio: 5000,
-    imageUrl: 'https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: '/images/alfajores%201.jpeg',
   },
   {
     id: 'alf-12',
@@ -62,7 +62,7 @@ export const products: Product[] = [
     tipoMedida: 'unidades',
     cantidad: 12,
     precio: 10000,
-    imageUrl: 'https://images.unsplash.com/photo-1475855791466-00b0f35cecd0?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: '/images/alfajores%201.jpeg',
   },
   {
     id: 'alf-18',
@@ -72,7 +72,7 @@ export const products: Product[] = [
     tipoMedida: 'unidades',
     cantidad: 18,
     precio: 15000,
-    imageUrl: 'https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: '/images/alfajores%201.jpeg',
   },
   {
     id: 'alf-24',
@@ -82,6 +82,6 @@ export const products: Product[] = [
     tipoMedida: 'unidades',
     cantidad: 24,
     precio: 20000,
-    imageUrl: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: '/images/alfajores%201.jpeg',
   },
 ];
