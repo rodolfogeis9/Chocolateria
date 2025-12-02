@@ -3,19 +3,24 @@ import { FaTrash, FaWhatsapp } from 'react-icons/fa';
 import { WHATSAPP_NUMBER } from '../config/settings';
 import { useCart } from '../context/CartContext';
 
-const buildOrderText = (items: ReturnType<typeof useCart>['items']) => {
-  const parts = items.map((item) => {
+const buildOrderText = (items: ReturnType<typeof useCart>['items'], total: number) => {
+  const heading = 'Hola, me gustaría poder comprar:';
+
+  const lines = items.map((item, index) => {
     const descriptor =
       item.product.categoria === 'chocolate'
         ? `${item.product.cantidad} g`
         : `caja de ${item.product.cantidad} alfajores`;
     const label = item.product.categoria === 'chocolate' ? 'chocolate' : 'caja';
-    return `${item.quantity} ${label}${item.quantity > 1 ? 's' : ''} de ${descriptor}`;
+    const quantityText = `${item.quantity} ${label}${item.quantity > 1 ? 's' : ''} de ${descriptor}`;
+    const subtotal = item.product.precio * item.quantity;
+
+    return `${index + 1}.\t${quantityText}; precio c/u: $ ${item.product.precio.toLocaleString('es-CL')}; subtotal: $ ${subtotal.toLocaleString('es-CL')}`;
   });
 
-  if (parts.length === 1) return `Hola, quiero ${parts[0]}.`;
-  const last = parts.pop();
-  return `Hola, quiero ${parts.join(', ')} y ${last}.`;
+  const totalLine = `Total pedido = $ ${total.toLocaleString('es-CL')}`;
+
+  return [heading, ...lines, '', totalLine].join('\n');
 };
 
 const Cart = () => {
@@ -28,7 +33,7 @@ const Cart = () => {
       return;
     }
     setError('');
-    const text = buildOrderText(items);
+    const text = buildOrderText(items, total);
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
