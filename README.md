@@ -1,6 +1,6 @@
-# Chocolatería Temuco
+# Chocolatería Santelmo
 
-Sitio estático hecho con React + Vite para una chocolatería artesanal. Incluye catálogo de chocolates y alfajores, carrito básico y envío de pedido por WhatsApp.
+Sitio estático hecho con React + Vite para la chocolatería artesanal Chocolatería Santelmo. Incluye catálogo de chocolates y alfajores, carrito básico y envío de pedido por WhatsApp.
 
 ## Requisitos
 - Node.js 18+

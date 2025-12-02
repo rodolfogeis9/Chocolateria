@@ -43,7 +43,7 @@ const Hero = () => {
 
       <div className="absolute inset-0 section-container flex flex-col justify-center text-cream space-y-6">
         <p className="badge w-fit bg-cream/20 text-cream border border-cream/30">
-          Hecho a mano en Temuco
+          Hecho a mano en San Telmo
         </p>
         <h1 className="text-4xl md:text-5xl font-bold leading-tight max-w-2xl">
           {HERO_CONTENT.title}

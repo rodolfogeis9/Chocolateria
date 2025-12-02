@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-30 bg-cream/90 backdrop-blur shadow-sm">
       <div className="section-container flex items-center justify-between py-4">
-        <div className="text-2xl font-bold text-chocolate">Chocolatería Temuco</div>
+        <div className="text-2xl font-bold text-chocolate">Chocolatería Santelmo</div>
         <nav className="hidden md:flex space-x-6 text-sm font-semibold">
           {links.map((link) => (
             <a
